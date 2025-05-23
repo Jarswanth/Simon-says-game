@@ -6,27 +6,16 @@ let started = false;
 let level = 0;
 let h2 = document.querySelector("h2");
 
-document.addEventListener("keydown", function () {
-    if (!started) {
-        console.log("Game is started");
-        started = true;
+function startGame(){
+    if(!started){
+        started=true;
         levelUp();
     }
-});
-document.addEventListener("click", function () {
-    if (!started) {
-        console.log("Game is started");
-        started = true;
-        levelUp();
-    }
-});
-document.addEventListener("touchstar", function () {
-    if (!started) {
-        console.log("Game is started");
-        started = true;
-        levelUp();
-    }
-});
+}   
+
+document.addEventListener("keydown", startGame);
+document.addEventListener("click", startGame);
+document.addEventListener("touchstar", startGame);
 
 function gameFlash(btn) {
     btn.classList.add("flash");
