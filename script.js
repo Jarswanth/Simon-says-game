@@ -4,16 +4,16 @@ let btns = ["yellow", "red", "purple", "green"];
 let started = false;
 
 let level = 0;
-let h2 = document.querySelector("h2");
+let h2 = document.querySelector("h2"); 
 
-function startGame(){
+document.addEventListener("keydown", function(e){
     if(!started){
+        console.log("Game is started");
         started=true;
         levelUp();
     }
-}   
-
-document.addEventListener("keydown", startGame);
+});
+    
 
 
 function gameFlash(btn) {
