@@ -20,6 +20,13 @@ document.addEventListener("click", function () {
         levelUp();
     }
 });
+document.addEventListener("touchstar", function () {
+    if (!started) {
+        console.log("Game is started");
+        started = true;
+        levelUp();
+    }
+});
 
 function gameFlash(btn) {
     btn.classList.add("flash");
